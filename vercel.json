@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/controllers/index.php" },
+      { "source": "/planner", "destination": "/controllers/planner.php" },
+      { "source": "/recipes", "destination": "/controllers/recipes.php" },
+      { "source": "/shopping_list", "destination": "/controllers/shopping_list.php" },
+      { "source": "/sign_in", "destination": "/controllers/sign_in.php" },
+      { "source": "/get_started", "destination": "/controllers/get_started.php" },
+      { "source": "/404", "destination": "/controllers/404.php" }
+    ]
+  }
+  

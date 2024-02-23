@@ -1,0 +1,348 @@
+:root {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  box-sizing: content-box;
+  
+  /* Background color vars */
+  
+  --colour-pallet-green-1: #dad7cd;
+  --colour-pallet-green-2: #a3b18a;
+  --colour-pallet-green-3: #588157;
+  --colour-pallet-green-4: #3a5a40;
+  --colour-pallet-green-5: #344e41;
+  --colour-pallet-green-6: #132a13;
+  --colour-pallet-grey: #dce1de;
+  --background: var(--colour-pallet-green-4);
+  background: var(--background);
+  
+
+  /* Breakpoints = 480px, 768px, 1024px, and 1280px */
+}
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  
+  section {
+    width: 100%;
+  }
+  
+  button {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--colour-pallet-green-3);
+    font: inherit;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--colour-pallet-green-4);
+  }
+  
+  button:hover:active {
+    background-color: var(--colour-pallet-green-4);
+    border: 2px solid var(--colour-pallet-green-3);
+  }
+  
+  #hero {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-around; 
+    background-image: url(../images/hero-image-1920x1280.jpg);
+    background-size: cover;
+    background-position-x: 60%;  
+    background-repeat: no-repeat;
+    height: 45vh;
+  }
+  
+  .hero-text {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    text-align: right;
+    flex-direction: column;
+  }
+  
+  .banner-header {
+    font-size: 2.5rem;
+    width: max-content;
+    padding: 16px 8px;
+    color: var(--colour-pallet-green-5);
+    margin-bottom: 12px;
+  }
+  
+  .banner-subtext {
+    font-size: 2rem;
+    width: 180px;
+    padding: 0 8px;
+    color: var(--colour-pallet-green-5);
+    margin-bottom: 12px;
+  }
+  
+  .banner-filler-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 200px;
+    padding: 6px 8px;
+    color: var(--colour-pallet-green-5);
+  }
+  
+  .hero-cta-container {
+    width: 100%;
+    height: 50px;
+  }
+  
+  .hero-cta {
+    background-color: var(--colour-pallet-green-3);
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1rem;
+    right: 24px;
+    position: absolute;
+    top: 380px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--colour-pallet-green-4);
+  }
+  
+  .hero-cta:hover:active {
+    background-color: var(--colour-pallet-green-4);
+    border: 2px solid var(--colour-pallet-green-3);
+  }
+  
+  #planner-index {
+    background: var(--colour-pallet-green-6);
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .planner-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .planner-container > h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--colour-pallet-green-1);
+    margin-bottom: 18px;
+  }
+  
+  .planner-container > p {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--colour-pallet-green-1);
+    margin-bottom: 18px;
+  }
+  
+  .planner-container p:nth-child(3) {
+    display: none;
+  }
+  
+  #recipes-index {
+    background: var(--colour-pallet-green-5);
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .recipes-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .recipes-container > h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--colour-pallet-green-1);
+    margin-bottom: 18px;
+  }
+  
+  .recipes-container > p {
+    width: 280px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--colour-pallet-green-1);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  
+  .recipes-container p:nth-child(3) {
+    display: none;
+  }
+  
+  #shopping-index {
+    background: var(--colour-pallet-green-1);
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .shopping-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .shopping-container > h3 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--colour-pallet-green-6);
+    margin-bottom: 18px;
+  }
+  
+  .shopping-container > p {
+    width: 280px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--colour-pallet-green-6);
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  
+  .shopping-container p:nth-child(3) {
+    display: none;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  @media screen and (max-width: 375px) {
+    #hero {
+      padding-top: 80px;
+      display: flex;
+      justify-content: space-around;
+      background-image: url(../images/hero-image-1920x1280.jpg);
+      background-size: cover;
+      background-position-x: 60%;
+      background-repeat: no-repeat;
+      height: 55vh;
+    }
+  }
+  
+  @media screen and (min-width: 768px) { /*Tablet*/
+  
+    .banner-header {
+      font-size: 3.8rem;
+    }
+    
+    .banner-subtext {
+      font-size: 2.5rem;
+      width: 380px;
+    }
+    
+    .banner-filler-text {
+      font-size: 1.3rem;
+      width: 330px;
+    }
+  
+    .hero-cta {
+      right: 100px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) { /*Laptop*/
+    
+    #hero {
+      height: 60vh;
+      min-height: 500px;
+    }
+    
+    .hero-text {
+      top: 160px;
+      right: 0;
+      text-align: right;
+      flex-direction: column;
+    }
+    
+    .banner-header {
+      font-size: 4.8rem;
+      width: max-content;
+      padding: 12px 20px;
+      color: var(--colour-pallet-green-5);
+      margin-bottom: 24px;
+    }
+    
+    .banner-subtext {
+      font-size: 3rem;
+      width: max-content;
+      padding: 0 20px;
+      color: var(--colour-pallet-green-5);
+      margin-bottom: 24px;
+    }
+    
+    .banner-filler-text {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      width: 390px;
+      padding: 6px 20px;
+      color: var(--colour-pallet-green-5);
+    }
+  
+    .hero-cta {
+      top: 480px;
+      right: 100px;
+      padding: 20px 30px;
+      font-size: 1.3rem;
+      border: 4px solid var(--colour-pallet-green-4);
+    }
+  }
+  
+  @media screen and (min-width: 1280px) { /*Other*/
+    #hero {
+      min-height: 560px;
+    }
+  
+    .banner-header {
+      font-size: 5.8rem;
+      margin-right: 8vw;
+    }
+    
+    .banner-subtext {
+      font-size: 3.5rem;
+      margin-right: 8vw;
+    }
+    
+    .banner-filler-text {
+      font-size: 1.8rem;
+      width: 470px;
+      margin-right: 8vw;
+    }
+    .hero-cta {
+      top: 540px;
+      right: 180px;
+      margin-right: 8vw;
+    }
+  }

@@ -1,0 +1,248 @@
+:root {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    box-sizing: content-box;
+    
+    /* Background color vars */
+    
+    --colour-pallet-green-1: #dad7cd;
+    --colour-pallet-green-2: #a3b18a;
+    --colour-pallet-green-3: #588157;
+    --colour-pallet-green-4: #3a5a40;
+    --colour-pallet-green-5: #344e41;
+    --colour-pallet-green-6: #132a13;
+    --colour-pallet-grey: #dce1de;
+    --background: var(--colour-pallet-green-4);
+    background: var(--background);
+    
+
+    /* Breakpoints = 480px, 768px, 1024px, and 1280px */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+section {
+    width: 100%;
+}
+
+button {
+    margin: 0;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--colour-pallet-green-3);
+    font: inherit;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--colour-pallet-green-4);
+}
+
+button:hover:active {
+    background-color: var(--colour-pallet-green-4);
+    border: 2px solid var(--colour-pallet-green-3);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////// */
+
+#planner {
+    margin-top: 60px;
+    height: 120vh;
+    background-color: var(--colour-pallet-green-4);
+}
+
+.planner-container {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .planner-header {
+    display: none;
+} */
+
+.planner-nav-bar {
+    width: 90%;
+    height: 48px;
+    background: var(--colour-pallet-green-1);
+    border-radius: 10px;
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--colour-pallet-green-6);
+    font-weight: 600;
+}
+
+.week-calander-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+    height: 10vh;
+    width: 80vw;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 1s ease;
+    background: var(--colour-pallet-green-1);
+} 
+
+.day-container.active {
+    flex: 4.5;
+}
+
+.day-container > h2 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--colour-pallet-green-6);
+}
+
+.day-container-image {
+    display: none;
+}
+
+.day-container > h3 {
+    display: none;
+}
+
+.day-container > button {
+    display: none;
+}
+
+.day-container.active .day-container-image {
+    display: block;
+    margin: 12px;
+    background-image: url(../images/lasagna.jpeg);
+    width: 80%;
+    height: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.day-container.active > h3 {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--colour-pallet-green-6);
+}
+
+.day-container.active > button {
+    display: block;
+}
+
+.add-meal-btn {
+    width: 80%;
+    margin-top: 12px;
+}
+
+.previous-week, .next-week {
+    margin: 12px
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+}
+
+@media screen and (max-width: 375px) {
+  }
+  @media screen and (min-width: 480px) { /*large phone/foldable ?*/
+    .planner-nav-bar {
+        height: 80px;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+
+    .day-container.active {
+        flex: 3;
+    }
+
+    .day-container > h2 {
+        font-size: 2.5rem;
+    }
+
+    .day-container.active > h3 {
+        font-size: 2.2rem;
+    }
+
+    .add-meal-btn {
+        width: 60%;
+        height: 5vh;
+        margin-top: 24px;
+        font-size: 1.8rem;
+    }
+    .day-container.active .day-container-image {
+        margin: 24px;
+    }
+  }
+  
+  @media screen and (min-width: 768px) { /*Tablet*/
+    .planner-nav-bar {
+        font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) { /*Laptop*/
+  }
+  
+  @media screen and (min-width: 1280px) { /*Other*/
+    
+    #planner {
+        height: 100vh;
+    }
+
+    .week-calander-container {
+        flex-direction: row;
+        width: 95%;
+        height: 80vh;
+    }
+
+    .day-container {
+        height: 80%;
+    }
+
+    .day-container > h2 {
+        display: none;
+    }
+
+    .day-container.active > h2 {
+        display: block;
+    }
+    
+    h2::after {
+        content: "\A"; /* Insert a line break after each character */
+        white-space: pre; /* Preserve whitespace and line breaks for the pseudo-element */
+    }
+
+  }
